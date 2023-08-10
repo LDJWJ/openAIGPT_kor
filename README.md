@@ -6,7 +6,7 @@
 책 제목 : 개발자를 위한 openAI GPT - 추후 책 표지 추가 예정
 
 <figure>
-    <img src="https://github.com/LDJWJ/kagglebook/blob/main/bookcover.png" alt="kaggle" width=300 height=300>
+    <img src="https://github.com/LDJWJ/openAIGPT_kor/blob/main/bookcover.png" alt="kaggle" width=300 height=300>
 </figure>
 
 ## Install openai
