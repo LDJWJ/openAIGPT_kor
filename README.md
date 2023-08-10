@@ -37,4 +37,5 @@ pip install openai
  - [OpenAI 개발자 플랫폼](https://platform.openai.com/)
  - 
 
-# Chapter 01
+## 강의 및 책 내용 문의
+ - frontier1020@naver.com
