@@ -2,24 +2,17 @@
 
 
 
-## 사전 설치 필요 패키지 
-### pip
+### Install openai
 ```bash
 pip install openai
 ```
 
+### 실습 코드
+ * 아래 코드는 Google colab 환경을 기본으로 합니다.
 
-
-# Chapter 01
-
-
-# Chapter 01
-
-
-# Chapter 01
-
-
-# Chapter 01
-
+## 📚 Learn More
+ - [01] ----
+ - [OpenAI 개발자 플랫](https://platform.openai.com/)
+ - 
 
 # Chapter 01
