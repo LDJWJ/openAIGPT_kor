@@ -26,13 +26,14 @@ pip install openai
  * openAI 다양한 인공지능 모델 확인해 보기(1) - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/02_prepareing_Develoment.ipynb)
  * openAI 다양한 인공지능 모델 확인해 보기(2) - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/03_availmodels.ipynb)
 
-### 03
- * GPT 모델 생성 코드 예제 -
+### 04. GPT 텍스트 완성 사용하기
+
+### 05. GPT 모델로 텍스트 수정하기
 
 
 ## 📚 Learn More
  - [01] ----
- - [OpenAI 개발자 플랫](https://platform.openai.com/)
+ - [OpenAI 개발자 플랫폼](https://platform.openai.com/)
  - 
 
 # Chapter 01
