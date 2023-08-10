@@ -1,0 +1,27 @@
+pip install virtualenvwrapper
+
+
+p9
+# MacOs and Linux users
+python get-pip.py 
+
+# Windows users
+python get-pip.py
+
+p10
+mkvirtualenv -p python3.9 chatgptforpythondevelopers
+
+workon chatgptforpythondevelopers
+
+p11
+source .env
+curl https://api.openai.com/v1/models \
+  -H 'Authorization: Bearer '$API_KEY'' \
+  -H 'OpenAI-Organization: '$ORG_ID''
+
+curl https://api.openai.com/v1/models \
+ -H 'Authorization: Bearer xxxx'\
+ -H 'OpenAI-Organization: xxxx'
+
+curl https://api.openai.com/v1/models
+ -H 'Authorization: Bearer xxxx'

@@ -1,0 +1,322 @@
+이전
+
+{
+  "choices": [
+    {
+      "finish_reason": "length",
+      "index": 0,
+      "logprobs": null,
+      "text": " there was a little girl named Alice"
+    }
+  ],
+  "created": 1674510189,
+  "id": "cmpl-6bysnKOUj0QWOu5DSiJAGcwIVMfNh",
+  "model": "text-davinci-003",
+  "object": "text_completion",
+  "usage": {
+    "completion_tokens": 7,
+    "prompt_tokens": 4,
+    "total_tokens": 11
+  }
+}
+
+=======>
+
+이후
+
+{
+  "warning": "This model version is deprecated. Migrate before January 4, 2024 to avoid disruption of service. Learn more https://platform.openai.com/docs/deprecations",
+  "id": "cmpl-7jJI2ofXpTIOztpTgHhIAn5ee5sL1",
+  "object": "text_completion",
+  "created": 1691033266,
+  "model": "text-davinci-003",
+  "choices": [
+    {
+      "text": " there was a little girl named Alice",
+      "index": 0,
+      "logprobs": null,
+      "finish_reason": "length"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4,
+    "completion_tokens": 7,
+    "total_tokens": 11
+  }
+}
+
+=============================
+이전
+
+{
+  "choices": [
+    {
+      "finish_reason": "length",
+      "index": 0,
+      "logprobs": null,
+      "text": " there was a little girl named Alice. She lived in a small village with "
+    }
+  ],
+  "created": 1674510438,,
+  "id": "cmpl-6bywotGlkujbrEF0emJ8iJmJBEEnO",
+  "model": "text-davinci-003",
+  "object": "text_completion",
+  "usage": {
+    "completion_tokens": 15,
+    "prompt_tokens": 4,
+    "total_tokens": 19
+  }
+}
+
+
+=============================
+이후
+
+{
+  "warning": "This model version is deprecated. Migrate before January 4, 2024 to avoid disruption of service. Learn more https://platform.openai.com/docs/deprecations",
+  "id": "cmpl-7jJLP4Bj6pcgjU85cVvnG6tZ97MZU",
+  "object": "text_completion",
+  "created": 1691033475,
+  "model": "text-davinci-003",
+  "choices": [
+    {
+      "text": " there was a little girl named Alice. She lived in a small village with",
+      "index": 0,
+      "logprobs": null,
+      "finish_reason": "length"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4,
+    "completion_tokens": 15,
+    "total_tokens": 19
+  }
+}
+
+=============================
+이전
+{
+    "choices": [
+        {
+            "finish_reason": "length",
+            "index": 0,
+            "logprobs": {
+                "text_offset": [16, 22, 26, 28, 35, 40, 46, 52, 53, 57, 63, 66, 68, 74, 82],
+                "token_logprobs": [-0.9263134, -0.2422086, -0.039050072, -1.8855333, -0.15475112, -0.30592665, -1.9697434, -0.34726024, -0.46498245, -0.46052673, -0.14448218, -0.0038384167, -0.029725535, -0.34297562, -0.4261593],
+                "tokens": [" there", " was", " a", " little", " girl", " named", " Alice", ".", " She", " lived", " in", " a", " small", " village", " with"],
+                "top_logprobs": [
+                    {
+                        " \n ": -1.1709108,
+                        " there": -0.9263134
+                    },
+                    {
+                        " lived": -2.040701,
+                        " was": -0.2422086
+                    },
+                    {
+                        " a": -0.039050072,
+                        " an": -3.403554
+                    },
+                    {
+                        " little": -1.8855333,
+                        " young": -2.02082
+                    },
+                    {
+                        " boy": -2.449015,
+                        " girl": -0.15475112
+                    },
+                    {
+                        " named": -0.30592665,
+                        " who": -1.7700866
+                    },
+                    {
+                        " Alice": -1.9697434,
+                        " Sarah": -2.9232333
+                    },
+                    {
+                        " who": -1.3002346,
+                        ".": -0.34726024
+                    },
+                    {
+                        " Alice": -1.2721952,
+                        " She": -0.46498245
+                    },
+                    {
+                        " lived": -0.46052673,
+                        " was": -1.7077477
+                    },
+                    {
+                        " in": -0.14448218,
+                        " with": -2.0538774
+                    },
+                    {
+                        " a": -0.0038384167,
+                        " the": -5.8157005
+                    },
+                    {
+                        " quaint": -4.941383,
+                        " small": -0.029725535
+                    },
+                    {
+                        " town": -1.454277,
+                        " village": -0.34297562
+                    },
+                    {
+                        " in": -1.7855972,
+                        " with": -0.4261593
+                    }
+                ]
+            },
+            "text": " there was a little girl named Alice. She lived in a small village with"
+        }
+    ],
+    "created": 1674511658,
+    "id": "cmpl-6bzGUTuc5AmbjsoNLNJULTaG0WWUP",
+    "model": "text-davinci-003",
+    "object": "text_completion",
+    "usage": {
+        "completion_tokens": 15,
+        "prompt_tokens": 4,
+        "total_tokens": 19
+    }
+}
+
+
+
+=============================
+이후
+
+{
+  "warning": "This model version is deprecated. Migrate before January 4, 2024 to avoid disruption of service. Learn more https://platform.openai.com/docs/deprecations",
+  "id": "cmpl-7jJbwAhYPkOrfW1ZDsHuxtpxq3nQD",
+  "object": "text_completion",
+  "created": 1691034500,
+  "model": "text-davinci-003",
+  "choices": [
+    {
+      "text": " there was a little girl named Alice. She lived in a small village with",
+      "index": 0,
+      "logprobs": {
+        "tokens": [
+          " there",
+          " was",
+          " a",
+          " little",
+          " girl",
+          " named",
+          " Alice",
+          ".",
+          " She",
+          " lived",
+          " in",
+          " a",
+          " small",
+          " village",
+          " with"
+        ],
+        "token_logprobs": [
+          -0.9226261,
+          -0.24545474,
+          -0.039832734,
+          -1.8920145,
+          -0.1544638,
+          -0.30665007,
+          -1.965912,
+          -0.35204643,
+          -0.45896524,
+          -0.44506103,
+          -0.1460721,
+          -0.0038986122,
+          -0.033566896,
+          -0.33236566,
+          -0.42713416
+        ],
+        "top_logprobs": [
+          {
+            " there": -0.9226261,
+            "\n": -1.1824785
+          },
+          {
+            " was": -0.24545474,
+            " lived": -2.0275993
+          },
+          {
+            " a": -0.039832734,
+            " an": -3.3820422
+          },
+          {
+            " little": -1.8920145,
+            " young": -2.0382926
+          },
+          {
+            " girl": -0.1544638,
+            " boy": -2.449874
+          },
+          {
+            " named": -0.30665007,
+            " who": -1.7648923
+          },
+          {
+            " Alice": -1.965912,
+            " Sarah": -2.9250898
+          },
+          {
+            ".": -0.35204643,
+            " who": -1.2884269
+          },
+          {
+            " She": -0.45896524,
+            " Alice": -1.2891997
+          },
+          {
+            " lived": -0.44506103,
+            " was": -1.7605308
+          },
+          {
+            " in": -0.1460721,
+            " with": -2.0432088
+          },
+          {
+            " a": -0.0038986122,
+            " the": -5.798732
+          },
+          {
+            " small": -0.033566896,
+            " quaint": -4.731581
+          },
+          {
+            " village": -0.33236566,
+            " town": -1.4807937
+          },
+          {
+            " with": -0.42713416,
+            " in": -1.7931963
+          }
+        ],
+        "text_offset": [
+          16,
+          22,
+          26,
+          28,
+          35,
+          40,
+          46,
+          52,
+          53,
+          57,
+          63,
+          66,
+          68,
+          74,
+          82
+        ]
+      },
+      "finish_reason": "length"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4,
+    "completion_tokens": 15,
+    "total_tokens": 19
+  }
+}
