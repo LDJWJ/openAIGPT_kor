@@ -23,8 +23,8 @@ pip install openai
  * GPT 모델 생성 코드 예제 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/01_GPT_Example.ipynb)
 
 ### 02~03 개발 환경 준비 및 사용 가능한 모델 확인
- * openAI 다양한 인공지능 모델 확인해 보기(1) - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ldjwj/02_prepareing_Develoment.ipynb)
- * openAI 다양한 인공지능 모델 확인해 보기(2) - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ldjwj/03_availmodels.ipynb)
+ * openAI 다양한 인공지능 모델 확인해 보기(1) - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/02_prepareing_Develoment.ipynb)
+ * openAI 다양한 인공지능 모델 확인해 보기(2) - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/03_availmodels.ipynb)
 
 ### 03
  * GPT 모델 생성 코드 예제 -
