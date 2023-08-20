@@ -32,6 +32,14 @@ pip install openai
 ### 05. GPT 모델로 텍스트 수정하기
  * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/05_TEXT_EDIT_WITH_GPT.ipynb)
 
+### 06. 텍스트 조작 예제: 고급편
+ * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/--)
+
+### 07. 임베딩
+ * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/--)
+
+
+
 ## 📚 Learn More
  - [01] ----
  - [OpenAI 개발자 플랫폼](https://platform.openai.com/)
