@@ -76,4 +76,10 @@ pip install openai
  - [OpenAI 개발자 플랫폼](https://platform.openai.com/)
  - [OpenAI Playground](https://platform.openai.com/playground)
 
+### 퓨샷 학습
+  - PyTorch - 토치메타(Torchmeta) - https://tristandeleu.github.io/pytorch-meta/ (PyTorch에서 few-shot learning과 메타-러닝을 위한 확장 및 데이터로더들을 모아둔 컬렉션)
+  - 퓨 샷(few-shot) : https://github.com/oscarknagg/few-shot (깨끗하고 명확하며 검증된 코드로 few-shot learning 연구를 재현하기 위한 저장소)
+  - 메타 전이 학습 : https://github.com/yaoyao-liu/meta-transfer-learning
+
+  - 
 # Chapter 01
