@@ -38,7 +38,38 @@ pip install openai
 ### 07. 임베딩
  * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/07_Embedding.ipynb)
 
+### 08. 임베딩:고급편
+ * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/08_Embedding_Advanced.ipynb)  
 
+### 09. 미세 튜닝과 모범 사례
+ * 실습 코드 - 
+
+### 10. 고급 미세 튜닝 - 약품 분류하기
+ * 실습 코드 - 
+
+### 11. 고급 미세 튜닝 - 챗봇 어시스턴트 만들기 
+ * 실습 코드 - 
+ 
+### 12. OpenAI Whisper를 사용한 지능형 음성 인식
+ * 실습 코드 - 
+ 
+### 13. 문맥과 기억: AI를 더 현실적으로 만들기
+ * 실습 코드 - 
+ 
+### 14. 인공지능 기반 Alexa 만들기 
+ * 실습 코드 - 
+
+### 15. OpenAI CLIP으로 이미지 분류하기
+ * 실습 코드 - 
+ 
+### 16. DALL-E을 활용한 이미지 생성하기
+ * 실습 코드 - 
+
+### 17. DALL-E을 활용한 이미지 편집하기
+ * 실습 코드 - 
+ 
+### 18. 다른 이미지에서 영감 얻기
+ * 실습 코드 - 
 
 ## 📚 Learn More
  - [01] ----
