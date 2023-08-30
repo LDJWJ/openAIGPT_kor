@@ -33,16 +33,16 @@ pip install openai
  * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/05_TEXT_EDIT_WITH_GPT.ipynb)
 
 ### 06. 텍스트 조작 예제: 고급편
- * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/--)
+ * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/06_Text_Manipulation_Example.ipynb)
 
 ### 07. 임베딩
- * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/--)
+ * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/07_Embedding.ipynb)
 
 
 
 ## 📚 Learn More
  - [01] ----
  - [OpenAI 개발자 플랫폼](https://platform.openai.com/)
- - 
+ - [OpenAI Playground](https://platform.openai.com/playground)
 
 # Chapter 01
