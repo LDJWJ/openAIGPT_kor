@@ -29,7 +29,7 @@ pip install openai
 ### 04. GPT 텍스트 완성 사용하기
  * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/04_GPT_Completion.ipynb)
  
-### 05. GPT 모델로 텍스트 수정하기
+### 05. GPT 모델로 텍스트 편집하기
  * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/05_TEXT_EDIT_WITH_GPT.ipynb)
 
 ### 06. 텍스트 조작 예제: 고급편
