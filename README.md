@@ -42,13 +42,13 @@ pip install openai
  * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/08_Embedding_Advanced.ipynb)  
 
 ### 09. 미세 튜닝과 모범 사례
- * 실습 코드 - 
+ * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/09_fine_tune.ipynb)   
 
 ### 10. 고급 미세 튜닝 - 약품 분류하기
- * 실습 코드 - 
+ * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/10_Advanced_FineTuning.ipynb) 
 
 ### 11. 고급 미세 튜닝 - 챗봇 어시스턴트 만들기 
- * 실습 코드 - 
+ * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/11_fineTuning_chatbot01.ipynb)
  
 ### 12. OpenAI Whisper를 사용한 지능형 음성 인식
  * 실습 코드 - 
