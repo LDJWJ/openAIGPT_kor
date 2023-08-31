@@ -50,6 +50,8 @@ pip install openai
 ### 11. 고급 미세 튜닝 - 챗봇 어시스턴트 만들기 
  * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/11_fineTuning_chatbot01.ipynb)
  
+ * 대화식 웹 앱 만들기 - [작업절차](./webApp.md)
+ 
 ### 12. OpenAI Whisper를 사용한 지능형 음성 인식
  * 실습 코드 - 
  
