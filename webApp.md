@@ -173,6 +173,7 @@ ORG_ID=org-xxx #optional
 ```
 
 #### 08. 프론트엔드 폴더에 index.js 파일 생성
+* frontend 폴더에서  chatbot/client/src/router/index.js 파일을 열고 아래 코드 작성
 ```
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
@@ -203,6 +204,7 @@ export default router
 ```
 
 #### 09. HomeView.vue 파일 생성
+* client/src/views에서 HomeView.vue 파일을 만들고 아래 코드를 추가
 ```
 <template>
     <div>
@@ -272,6 +274,7 @@ export default {
 ```
 
 #### 10. AboutView.vue 파일 생성
+
 * 리눅스 환경 - 파일 생성 후, 
 ```
 touch client/src/views/AboutView.vue
@@ -286,6 +289,7 @@ touch client/src/views/AboutView.vue
 ```
 
 * 원도우 환경 - 아래 내용으로 파일 작성
+* 경로 - client/src/views/AboutView.vue
 ```
 <template> 
     <div class= "about" > 
