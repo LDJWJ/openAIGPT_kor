@@ -53,25 +53,22 @@ pip install openai
  * 대화식 웹 앱 만들기 - [작업절차](./webApp.md)
  
 ### 12. OpenAI Whisper를 사용한 지능형 음성 인식
- * 실습 코드 - 
+ * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/12_openAI_Whisper.ipynb)
  
 ### 13. 문맥과 기억: AI를 더 현실적으로 만들기
- * 실습 코드 - 
+ * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/13_Context_Memory.ipynb) 
  
 ### 14. 인공지능 기반 Alexa 만들기 
  * 실습 코드 - 
 
 ### 15. OpenAI CLIP으로 이미지 분류하기
- * 실습 코드 - 
+ * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/15_OpenAI_CLIP.ipynb)
  
-### 16. DALL-E을 활용한 이미지 생성하기
- * 실습 코드 - 
-
-### 17. DALL-E을 활용한 이미지 편집하기
- * 실습 코드 - 
+### 16-17 DALL-E을 활용한 이미지 생성하기, DALL-E을 활용한 이미지 편집하기
+ * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/16_17_DALL_E.ipynb) 
  
 ### 18. 다른 이미지에서 영감 얻기
- * 실습 코드 - 
+ * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/18_Image_Make_Variation.ipynb) 
 
 ## 📚 Learn More
  - [01] ----
@@ -83,5 +80,3 @@ pip install openai
   - 퓨 샷(few-shot) : https://github.com/oscarknagg/few-shot (깨끗하고 명확하며 검증된 코드로 few-shot learning 연구를 재현하기 위한 저장소)
   - 메타 전이 학습 : https://github.com/yaoyao-liu/meta-transfer-learning
 
-  - 
-# Chapter 01
