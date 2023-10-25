@@ -59,7 +59,9 @@ pip install openai
  * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/13_Context_Memory.ipynb) 
  
 ### 14. 인공지능 기반 Alexa 만들기 
- * 실습 코드 - 
+ * 해당 작업은 로컬 컴퓨터에서 실행합니다.
+ * 사전 설치하기 [Doc](./14_install.md)
+ * - [작업절차](./webApp.md)
 
 ### 15. OpenAI CLIP으로 이미지 분류하기
  * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/15_OpenAI_CLIP.ipynb)
