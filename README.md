@@ -33,10 +33,10 @@ pip install openai
  * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/05_TEXT_EDIT_WITH_GPT_V1.ipynb)
 
 ### 06. 텍스트 조작 예제: 고급편
- * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/06_Text_Manipulation_Example.ipynb)
+ * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/06_Text_Manipulation_Example_V1.ipynb)
 
 ### 07. 임베딩
- * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/07_Embedding.ipynb)
+ * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/07_Embedding_V1.ipynb)
 
 ### 08. 임베딩:고급편
  * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/08_Embedding_Advanced.ipynb)  
