@@ -42,21 +42,21 @@ pip install openai
  * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/08_Embedding_Advanced_V10.ipynb)  
 
 ### 09. 미세 튜닝과 모범 사례
- * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/09_fine_tune.ipynb)   
+ * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/09_fine_tune_V10.ipynb)   
 
 ### 10. 고급 미세 튜닝 - 약품 분류하기
- * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/10_Advanced_FineTuning.ipynb) 
+ * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/10_Advanced_FineTuning_V10.ipynb) 
 
 ### 11. 고급 미세 튜닝 - 챗봇 어시스턴트 만들기 
- * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/11_fineTuning_chatbot01.ipynb)
+ * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/11_fineTuning_chatbot_V10.ipynb)
  
  * 대화식 웹 앱 만들기 - [작업절차](./webApp.md)
  
 ### 12. OpenAI Whisper를 사용한 지능형 음성 인식
- * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/12_openAI_Whisper.ipynb)
+ * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/12_openAI_Whisper_V10.ipynb)
  
 ### 13. 문맥과 기억: AI를 더 현실적으로 만들기
- * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/13_Context_Memory.ipynb) 
+ * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/13_Context_Memory_V10.ipynb) 
  
 ### 14. 인공지능 기반 Alexa 만들기 
  * 해당 작업은 로컬 컴퓨터에서 실행합니다.
@@ -64,13 +64,13 @@ pip install openai
  * - [작업절차](./webApp.md)
 
 ### 15. OpenAI CLIP으로 이미지 분류하기
- * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/15_OpenAI_CLIP.ipynb)
+ * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/15_OpenAI_CLIP_V10.ipynb)
  
 ### 16-17 DALL-E을 활용한 이미지 생성하기, DALL-E을 활용한 이미지 편집하기
- * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/16_17_DALL_E.ipynb) 
+ * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/16_17_DALL_E_V10.ipynb) 
  
 ### 18. 다른 이미지에서 영감 얻기
- * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/18_Image_Make_Variation.ipynb) 
+ * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/18_Image_Make_Variation_V10.ipynb) 
 
 ## 📚 Learn More
  - [01] ----
