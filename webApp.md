@@ -1,7 +1,19 @@
 ### 대화식 웹 앱 만들기 
 
+### 사전 아나콘다 환경에 가상환경 구축하기
+  * 아나콘다 설치 후, 가상환경에 설치할 때, 이 부분 추가
+```
+conda create -n myChat python=3.11
+conda activate myChat
+```
+
 ### Vue.js 설치 및 환경 구축하기
   * Node.js가 설치되어 있어야 npm에 의한 명령이 정상적으로 실행됩니다.
+
+#### 00. openai 설치
+```
+pip install openai
+```
 
 #### 01. vue.js 설치
 ```
@@ -64,43 +76,56 @@ def regular_discussion(prompt):
 Davinci를 사용하여 API로부터 응답을 반환합니다. 사용자가 약명에 대해 묻는 경우, get_malady_name() 함수를 호출합니다.
     """
     prompt = """
-The following is a conversation with an AI assistant. The assistant is helpful, creative, clever,
-very friendly and careful with Human's health topics. The AI assistant is not a doctor and does not
-diagnose or treat medical conditions to Human. The AI assistant is not a pharmacist and does not
-dispense or recommend medications to Human. The AI assistant does not provide medical advice to Human.
-The AI assistant does not provide medical and health diagnosis to Human. The AI assistant does not
-provide medical treatment to Human. The AI assistant does not provide medical prescriptions to Human.
-If Human writes the name of a drug the assistant will reply with "######".
-Human: Hi
-AI: Hello Human. How are you? I'll be glad to help. Give me the name of a drug and I'll tell you what it's used for.
-Human: Vitibex
-AI: ######
-Human: I'm fine. How are you?
-AI: I am fine. Thank you for asking. I'll be glad to help. Give me the name of a drug and I'll tell you what it's used for.
-Human: What is Chaos Engineering?
-AI: I'm sorry, I am not qualified to do that. I'm only programmed to answer questions about drugs. Give me the name of a drug and I'll tell you what it's used for.
-Human: Where is Carthage?
-AI: I'm sorry, I am not qualified to do that. I'm only programmed to answer questions about drugs. Give me the name of a drug and I'll tell you what it's used for.
-Human: What is Maxcet 5mg Tablet 10'S?
-AI: ######
-Human: What is Axepta?
-AI: ######
-Human: {}
-AI:""".format(prompt)
 
-    # API로부터 응답을 얻기
-    response = openai.Completion.create(
-        model="text-davinci-003",
-        prompt=prompt,
-        max_tokens=100,
-        stop=["\\n", "Human:", "AI:"],
+	다음은 AI 비서와의 대화입니다. 이 비서는 유용하고, 창의적이며, 영리하고, 매우 친절하며 인간의 건강 주제에 대해 주의를 기울입니다.
+	AI 비서는 의사가 아니며 인간에게 의학적 상태를 진단하거나 치료하지 않습니다.
+	AI 비서는 약사가 아니며 인간에게 약을 조제하거나 추천하지 않습니다.
+	AI 비서는 인간에게 의학적 조언을 제공하지 않습니다.
+	AI 비서는 인간에게 의학 및 건강 진단을 제공하지 않습니다.
+	AI 비서는 인간에게 의학적 치료를 제공하지 않습니다.
+	AI 비서는 인간에게 의학적 처방을 제공하지 않습니다.
+	사용자가 약물의 이름을 쓰면, 비서는 "######"으로 답할 것입니다.
+	User: 안녕하세요.
+	AI: 안녕하세요, 사용자님. 어떠신가요? 도와드릴게요. 약물의 이름을 말씀해 주시면 그것이 무엇에 사용되는지 알려드리겠습니다.
+	User: Vitibex
+	AI: ######
+	User: 저는 괜찮아요. 당신은 어떠세요?
+	AI: 저는 괜찮습니다. 물어봐 주셔서 감사합니다. 도와드릴게요. 약물의 이름을 말씀해 주시면 그것이 무엇에 사용되는지 알려드리겠습니다.
+	User: 카오스 엔지니어링이 무엇인가요?
+	AI: 죄송합니다, 그것을 말할 자격이 없습니다. 저는 약물에 대한 질문에만 답하는 것으로 프로그래밍되었습니다. 약물의 이름을 말씀해 주시면 그것이 무엇에 사용되는지 알려드리겠습니다.
+	User: 카르타고는 어디에 있나요?
+	AI: 죄송합니다, 그것을 말할 자격이 없습니다. 저는 약물에 대한 질문에만 답하는 것으로 프로그래밍되었습니다. 약물의 이름을 말씀해 주시면 그것이 무엇에 사용되는지 알려드리겠습니다.
+	User: Maxcet 5mg Tablet 10'S는 무엇인가요?
+	AI: ######
+	User: ACGEL CL NANO Gel 15gm는 무엇인가요?
+	AI: ######
+	User: Axepta는 무엇인가요?
+	AI: ######
+ 	User: ALAN Gel 15gm는 무엇인가요?
+	AI: ######        
+    User: {} 
+    AI:
+    """.format(prompt)
+
+    # API에서 응답 얻기
+    next = client.chat.completions.create(
+    model="gpt-3.5-turbo",
+    messages=[
+        {
+        "role": "user",
+        "content": prompt
+        }
+    ],
+    temperature=0,
+    max_tokens=256,
+    stop = [ " \n " , " User:" , " AI:" ],
     )
 
-    if response.choices[0].text.strip() == "######":
+    if next.choices[0].message.content.strip() == "######": 
         return get_malady_name(prompt)
-    else:
-        final_response = response.choices[0].text.strip() + "\\n"
-        return "{}".format(final_response)
+    else: 
+        final_response = next.choices[0].message.content + " \n " 
+        return("{}".format(final_response))
 
 def get_malady_name(drug_name):
     """
@@ -127,33 +152,40 @@ def get_malady_name(drug_name):
     )
     response = response.choices[0].text.strip()
 
-    try:
-        malady = class_map[int(response)]
+    try: 
+        malady = class_map[ int(next)] 
         print("==")
-        print("This drug is used for {}.".format(malady) + get_malady_description(malady))
-        return "This drug is used for {}.".format(malady) + " " + get_malady_description(malady)
-    except:
-        return "I don't know what '" + drug_name + "' is used for."
-
+        print ( "AI: 이 약물은 {} 에 사용되고 있어요.".format(malady) + get_malady_description(malady))
+        return "AI: 이 약물은 {} 에 사용되고 있어요.".format(malady) + get_malady_description(malady) 
+    except:  
+        return "AI: 저도 '" + drug_name + "' 이 어디에 사용되는지 모르겠어요."
+       
 def get_malady_description(malady):
     """
     매개변수 : malady – 문자열
     Davinci를 사용하여 API에서 질병에 대한 설명을 가져옵니다.
     """
     prompt = """
-The following is a conversation with an AI assistant. The assistant is helpful, creative, clever,
-and very friendly. The assistant does not provide medical advice. It only defines a malady, a disease,
-or a condition. If the assistant does not know the answer to a question, it will ask to rephrase it.
-Q: What is {} ? A:""".format(malady)
+    다음은 AI 비서와의 대화입니다.
+    이 비서는 유용하고, 창의적이며, 영리하고, 매우 친절합니다.
+    비서는 의학적 조언을 제공하지 않습니다.
+    비서는 병, 질병 또는 상태를 정의하는 데에만 집중합니다.
+    비서가 질문에 대한 답을 모를 경우, 다시 표현해달라고 요청할 것입니다.
+    Q: {}는 무엇입니까?
+    A:""".format(malady)
 
     # API로부터 응답을 얻습니다.
-    response = openai.Completion.create(
-        model="text-davinci-003",
-        prompt=prompt,
-        max_tokens=100,
-        stop=["\\n", " Q:", " A:"],
+    next = client.chat.completions.create(
+        model="gpt-3.5-turbo" ,
+        messages=[
+          {"role": "user", "content": prompt}
+        ],
+        temperature = 1,
+        max_tokens = 256,
+        stop = [ " \n " , " Q:" , " A:" ]
     )
-    return response.choices[0].text.strip() + "\\n"
+    
+    return next.choices[0].message.content.strip() + "\n"
 
 @app.route('/', methods=['GET'])
 def reply():
@@ -303,7 +335,7 @@ touch client/src/views/AboutView.vue
 ```
 cd server
 python app.py
-
+
 cd client
 npm run serve
 ```
