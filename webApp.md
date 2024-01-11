@@ -113,7 +113,7 @@ app.config.from_object(__name__)
 CORS(app, resources={r'/*': {'origins': '*'}})
 
 def init_api():
-    with open(“chatgpt.env”) as env:
+    with open("chatgpt.env") as env:
         for line in env:
             key, value = line.strip().split("=")
             os.environ[key] = value
@@ -360,21 +360,7 @@ export default {
 ```
 
 #### 10. AboutView.vue 파일 생성
-
-* 리눅스 환경 - 파일 생성 후, 
-```
-touch client/src/views/AboutView.vue
-```
 * 파일 내용 작성
-```
-<template> 
-    <div class= "about" > 
-        <h1> This is an about page </h1> 
-    </div> 
-</template>
-```
-
-* 원도우 환경 - 아래 내용으로 파일 작성
 * 경로 - client/src/views/AboutView.vue
 ```
 <template> 
@@ -384,17 +370,71 @@ touch client/src/views/AboutView.vue
 </template>
 ```
 
-#### 11. 챗봇 실행하기
+#### 11. Python 기반의 웹 서버 실행
 * 챗봇 실행 
 ```
 cd server
 python app.py
+```
 
-cd client
+* 실행 결과
+```
+(myChat) C:\Users\user\chatbot_medi\server>python app.py
+ * Serving Flask app 'app'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 685-908-876
+```
+
+* 에러 발생시
+* 에러 발생 1 : chatgpt.env부분을 불러올 때, "" 쌍따옴표를 문자를 이해못할때,
+* 해결
+```
+with open("chatgpt.env") as env:
+```
+
+* 에러 발생 2 : chatgpt.env부분을 불러올 때, "" 쌍따옴표를 문자를 이해못할때,
+* 에러 및 원인
+```
+ImportError: cannot import name 'url_quote' from 'werkzeug.urls' (C:\Users\user\anaconda3\envs\myChat\Lib\site-packages\werkzeug\urls.py)
+Flask가 werkzeug.urls에서 url_quote를 가져오려고 시도했으나 실패했습니다. 이는 일반적으로 Flask 또는 Werkzeug 버전 간의 호환성 문제로 발생
+```
+
+* 해결 방법1
+* 내용 : 최신 버전으로 업데이트합니다. 특정 버전을 설치해야 한다면 pip install flask==x.x.x werkzeug==y.y.y 형식으로 설치하세요.
+```
+pip install --upgrade flask werkzeug
+```
+
+#### 12. Vue.js 프로젝트를 로컬 개발 서버에서 실행
+* 맨처음 실행했던 anaconda prompt를 새롭게 하나 실행 후, 아래 명령으로 실행합니다.
+* client 폴더로 이동
+```
+cd chatbot_medi\client
 npm run serve
 ```
+- Vue.js 프로젝트를 로컬 개발 서버에서 실행하기 위해 사용합니다.
 
-* 브라우저를 열고 주소를 이동해 챗봇 확인해 보기
+* 실행 결과
 ```
-http://localhost:<PORT>/
+ DONE  Compiled successfully in 4341ms                                                                     오후 12:13:56
+
+
+  App running at:
+  - Local:   http://localhost:8080/
+  - Network: http://192.168.120.122:8080/
+
+  Note that the development build is not optimized.
+  To create a production build, run npm run build.
+```
+
+#### 13. 브라우저에서 실행 확인
+* 브라우저를 열고 앞에서 확인한 주소를 이동해 챗봇 확인해 보기
+```
+Local:   http://localhost:8080/
+Network: http://192.168.120.122:8080/
 ```
