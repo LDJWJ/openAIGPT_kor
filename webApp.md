@@ -12,6 +12,7 @@ chatbot_medi 폴더 생성
 <p align="center">
   <img src="[이미지 URL](https://ldjwj.github.io/openAIGPT_kor/image/ch11_01_anaconda.png)" width="50%" />
 </p>
+
 ```
 conda create -n myChat python=3.11
 conda activate myChat
