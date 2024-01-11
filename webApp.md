@@ -129,14 +129,14 @@ def regular_discussion(prompt):
     이 함수는 get_malady_name()을 호출할 것입니다.
     """ 
     prompt = """ 
-	다음은 AI 비서와의 대화입니다. 이 비서는 유용하고, 창의적이며, 영리하고, 매우 친절하며 사람의 건강 주제에 대해 주의를 기울입니다.
+	이것은 다음은 AI 비서와의 대화입니다. 이 비서는 유용하고, 창의적이며, 영리하고, 매우 친절하며 사람의 건강 주제에 대해 주의를 기울입니다.
 	AI 비서는 의사가 아니며 사람에게 의학적 상태를 진단하거나 치료하지 않습니다.
 	AI 비서는 약사가 아니며 사람에게 약을 조제하거나 추천하지 않습니다.
 	AI 비서는 사람에게 의학적 조언을 제공하지 않습니다.
 	AI 비서는 사람에게 의학 및 건강 진단을 제공하지 않습니다.
 	AI 비서는 사람에게 의학적 치료를 제공하지 않습니다.
 	AI 비서는 사람에게 의학적 처방을 제공하지 않습니다.
-	사용자가 약물의 이름을 쓰면, 비서는 "######"으로 답할 것입니다.
+	인간이 사용자가 약물의 이름을 쓰면, 비서는 "######"으로 답할 것입니다.
 	User: 안녕하세요.
 	AI: 안녕하세요, 사용자님. 어떠신가요? 도와드릴게요. 약물의 이름을 말씀해 주시면 그것이 무엇에 사용되는지 알려드리겠습니다.
 	User: Vitibex
@@ -150,10 +150,12 @@ def regular_discussion(prompt):
 	User: Maxcet 5mg Tablet 10'S는 무엇인가요?
 	AI: ######
 	User: Axepta는 무엇인가요?
-	AI: ######    
+	AI: ######
+    User: ALAN Gel 15gm는 무엇인가요?
+	AI: ######        
     User: {} 
     AI:
-    """.format(prompt) 
+    """.format(prompt)
 
     # API에서 응답 얻기
     next = client.chat.completions.create(
@@ -170,19 +172,18 @@ def regular_discussion(prompt):
     )
 
     if next.choices[0].message.content.strip() == "######": 
-        get_malady_name(prompt) 
+        return get_malady_name(prompt) 
     else: 
         final_response = next.choices[0].message.content + " \n " 
-        print ( "AI: {} " . format (final_response))
-
-
+        return ( "AI: {} ".format(final_response))
+   
 def get_malady_name(drug_name):
     """
     params: drug_name - a string
     Fine-tuned 모델에서 약 이름에 해당하는 질병 이름을 반환합니다.
     이 함수는 get_malady_description() 함수를 호출하여 질병에 관한 설명을 얻습니다.
     """
-# 모델 ID 설정. 여기서는 모델 ID를 변경해 주세요.
+    # 모델 ID 설정. 여기서는 모델 ID를 변경해 주세요.
     model = "ft:gpt-3.5-turbo-0613:personal:drug-malady-data:8Ttey3h4"
     class_map = {
         0: "Acne",
@@ -193,21 +194,25 @@ def get_malady_name(drug_name):
 
     # 각 약에 관한 클래스 반환
     prompt = "Drug: {}\\nMalady:".format(drug_name)
-    response = openai.Completion.create(
-        model=model,
-        prompt=prompt,
-        temperature=1,
-        max_tokens=1,
+
+    next = client.chat.completions.create(
+        model=fine_tune_model,
+        messages=[
+          {"role": "user", "content": prompt}
+        ],
+        temperature = 1,
+        max_tokens = 5
     )
-    response = response.choices[0].message.content.strip()
+    
+    next = response.choices[0].message.content.strip()
 
     try:
-        malady = class_map[int(response)]
+        malady = class_map[int(next)]
         print("==")
         print ( "AI: 이 약물은 {} 에 사용되고 있어요.".format(malady) + get_malady_description(malady))
         return "AI: 이 약물은 {} 에 사용되고 있어요.".format(malady) + get_malady_description(malady) 
     except:
-        return "AI: 저도 '" + drug_name + "' 이 어디에 사용되는지 모르겠어요."
+        return "AI: 저도 '" + drug_name + "' 이 어디에 사용되는지 모르겠어요. "
 
 def get_malady_description(malady):
     """
@@ -225,16 +230,16 @@ def get_malady_description(malady):
 
     # API에서로부터 응답을 얻기
     next = client.chat.completions.create(
-      model="gpt-3.5-turbo",
-      messages=[
-        {
-          "role": "user", "content": prompt
-        }
-      ],
-      max_tokens=100,
-      stop=["\\n", " Q:", " A:"]
+        model="gpt-3.5-turbo" ,
+        messages=[
+          {"role": "user", "content": prompt}
+        ],
+        temperature = 1,
+        max_tokens = 256,
+        stop = [ " \n " , " Q:" , " A:" ]
     )
-    return next.choices[0].text.strip() + "\\n"
+
+    return next.choices[0].message.content.strip() + "\n"
 
 @app.route('/', methods=['GET'])
 def reply():
@@ -245,6 +250,9 @@ def reply():
 
 if __name__ == '__main__':
     app.run()
+
+
+
 
 ```
 
