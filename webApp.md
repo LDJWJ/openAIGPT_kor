@@ -15,7 +15,7 @@ chatbot_medi 폴더 생성
 </div>
 
 <p align="center">
-  <img src="[이미지 URL](https://ldjwj.github.io/openAIGPT_kor/image/ch11_01_anaconda.png)" width="50%" />
+  <img src="https://ldjwj.github.io/openAIGPT_kor/image/ch11_01_anaconda.png" width="50%" />
 </p>
 
 ```
