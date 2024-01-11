@@ -1,7 +1,19 @@
 ### 대화식 웹 앱 만들기 
 
+### 로컬 컴퓨터에 작업 폴더하나 만들기
+  * 이 폴더가 웹 앱을 구동하는 실제 디렉터리가 된다. 여기에서는 chatbot_medi를 생성
+```
+chatbot_medi 폴더 생성
+```
+
 ### 사전 아나콘다 환경에 가상환경 구축하기
-  * 아나콘다 설치 후, 가상환경에 설치할 때, 이 부분 추가
+  * 아나콘다 설치 후, 가상환경에 설치할 때, 이 부분 추가.
+
+<!-- HTML 주석도 사용할 수 있습니다 -->
+<p align="center">
+  <img src="https://ldjwj.github.io/openAIGPT_kor/image/ch11_01_anaconda.png" width="30%" />
+</p>
+
 ```
 conda create -n myChat python=3.11
 conda activate myChat

@@ -9,6 +9,9 @@
     <img src="https://github.com/LDJWJ/openAIGPT_kor/blob/main/bookcover.png" alt="kaggle" width=300 height=300>
 </figure>
 
+### my web site
+ * https://ldjwj.github.io/openAIGPT_kor/
+
 ## Install openai
 ```bash
 pip install openai
