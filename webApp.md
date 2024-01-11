@@ -18,6 +18,8 @@ chatbot_medi 폴더 생성
 conda create -n myChat python=3.11
 conda activate myChat
 ```
+ - conda create의 명령으로 myChat이라는 가상환경을 생성합니다.
+ - conda activate의 명령으로 myChat의 가상환경을 활성화합니다.
 
 ### Vue.js 설치 및 환경 구축하기
   * Node.js가 설치되어 있어야 npm에 의한 명령이 정상적으로 실행됩니다.
