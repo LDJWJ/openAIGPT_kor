@@ -100,12 +100,11 @@ cd c:\user\chatbot_medi\server
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 import os
-import openai
+from openai import OpenAI
 
 # configuration
 DEBUG = True
 
-# instantiate the app
 app = Flask(__name__)
 app.config.from_object(__name__)
 
@@ -114,29 +113,30 @@ CORS(app, resources={r'/*': {'origins': '*'}})
 
 def init_api():
     with open("chatgpt.env") as env:
-        for line in env:
-            key, value = line.strip().split("=")
-            os.environ[key] = value
-    openai.api_key = os.environ.get("API_KEY")
-    openai.organization = os.environ.get("ORG_ID")
-
+       for line in env:
+           key, value = line.strip().split("=")
+           os.environ[key] = value
+    
 init_api()
 
-def regular_discussion(prompt):
-    """
-    params: prompt - a string
-Davinci를 사용하여 API로부터 응답을 반환합니다. 사용자가 약명에 대해 묻는 경우, get_malady_name() 함수를 호출합니다.
-    """
-    prompt = """
+client = OpenAI(api_key  = os.environ.get("API_KEY"), 
+                organization  = os.environ.get("ORG_ID"))
 
-	다음은 AI 비서와의 대화입니다. 이 비서는 유용하고, 창의적이며, 영리하고, 매우 친절하며 인간의 건강 주제에 대해 주의를 기울입니다.
-	AI 비서는 의사가 아니며 인간에게 의학적 상태를 진단하거나 치료하지 않습니다.
-	AI 비서는 약사가 아니며 인간에게 약을 조제하거나 추천하지 않습니다.
-	AI 비서는 인간에게 의학적 조언을 제공하지 않습니다.
-	AI 비서는 인간에게 의학 및 건강 진단을 제공하지 않습니다.
-	AI 비서는 인간에게 의학적 치료를 제공하지 않습니다.
-	AI 비서는 인간에게 의학적 처방을 제공하지 않습니다.
-	사용자가 약물의 이름을 쓰면, 비서는 "######"으로 답할 것입니다.
+def regular_discussion(prompt): 
+    """ 
+    params: prompt - 문자열
+    OpenAI API를 사용하여 API로부터 응답을 반환합니다. 사용자가 약에 대해 물어보면, 
+    이 함수는 get_malady_name()을 호출할 것입니다.
+    """ 
+    prompt = """ 
+	이것은 다음은 AI 비서와의 대화입니다. 이 비서는 유용하고, 창의적이며, 영리하고, 매우 친절하며 사람의 건강 주제에 대해 주의를 기울입니다.
+	AI 비서는 의사가 아니며 사람에게 의학적 상태를 진단하거나 치료하지 않습니다.
+	AI 비서는 약사가 아니며 사람에게 약을 조제하거나 추천하지 않습니다.
+	AI 비서는 사람에게 의학적 조언을 제공하지 않습니다.
+	AI 비서는 사람에게 의학 및 건강 진단을 제공하지 않습니다.
+	AI 비서는 사람에게 의학적 치료를 제공하지 않습니다.
+	AI 비서는 사람에게 의학적 처방을 제공하지 않습니다.
+	인간이 사용자가 약물의 이름을 쓰면, 비서는 "######"으로 답할 것입니다.
 	User: 안녕하세요.
 	AI: 안녕하세요, 사용자님. 어떠신가요? 도와드릴게요. 약물의 이름을 말씀해 주시면 그것이 무엇에 사용되는지 알려드리겠습니다.
 	User: Vitibex
@@ -149,11 +149,9 @@ Davinci를 사용하여 API로부터 응답을 반환합니다. 사용자가 약
 	AI: 죄송합니다, 그것을 말할 자격이 없습니다. 저는 약물에 대한 질문에만 답하는 것으로 프로그래밍되었습니다. 약물의 이름을 말씀해 주시면 그것이 무엇에 사용되는지 알려드리겠습니다.
 	User: Maxcet 5mg Tablet 10'S는 무엇인가요?
 	AI: ######
-	User: ACGEL CL NANO Gel 15gm는 무엇인가요?
-	AI: ######
 	User: Axepta는 무엇인가요?
 	AI: ######
- 	User: ALAN Gel 15gm는 무엇인가요?
+    User: ALAN Gel 15gm는 무엇인가요?
 	AI: ######        
     User: {} 
     AI:
@@ -161,32 +159,32 @@ Davinci를 사용하여 API로부터 응답을 반환합니다. 사용자가 약
 
     # API에서 응답 얻기
     next = client.chat.completions.create(
-    model="gpt-3.5-turbo",
-    messages=[
-        {
-        "role": "user",
-        "content": prompt
-        }
-    ],
-    temperature=0,
-    max_tokens=256,
-    stop = [ " \n " , " User:" , " AI:" ],
+       model="gpt-3.5-turbo",
+       messages=[
+          {
+           "role": "user",
+           "content": prompt
+           }
+       ],
+       temperature=0,
+       max_tokens=100,
+       stop = [ " \n " , " User:" , " AI:" ],
     )
 
     if next.choices[0].message.content.strip() == "######": 
-        return get_malady_name(prompt)
+        return get_malady_name(prompt) 
     else: 
         final_response = next.choices[0].message.content + " \n " 
-        return("{}".format(final_response))
-
+        return ( "AI: {} ".format(final_response))
+   
 def get_malady_name(drug_name):
     """
     params: drug_name - a string
     Fine-tuned 모델에서 약 이름에 해당하는 질병 이름을 반환합니다.
-    이 함수는 get_malady_description() 함수를 호출하여 질병에 대한 설명을 얻습니다.
+    이 함수는 get_malady_description() 함수를 호출하여 질병에 관한 설명을 얻습니다.
     """
-# 모델 ID 설정. 여기서는 모델 ID를 변경해 주세요.
-    model = " ada:ft-personal:drug-data-2023-08-15-09-58-51"
+    # 모델 ID 설정. 여기서는 모델 ID를 변경해 주세요.
+    model = "ft:gpt-3.5-turbo-0613:personal:drug-malady-data:8Ttey3h4"
     class_map = {
         0: "Acne",
         1: "Adhd",
@@ -194,28 +192,32 @@ def get_malady_name(drug_name):
         # ...
     }
 
-    # 각 약물에 대한 클래스를 반환
+    # 각 약에 관한 클래스 반환
     prompt = "Drug: {}\\nMalady:".format(drug_name)
-    response = openai.Completion.create(
-        model=model,
-        prompt=prompt,
-        temperature=1,
-        max_tokens=1,
-    )
-    response = response.choices[0].text.strip()
 
-    try: 
-        malady = class_map[ int(next)] 
+    next = client.chat.completions.create(
+        model=fine_tune_model,
+        messages=[
+          {"role": "user", "content": prompt}
+        ],
+        temperature = 1,
+        max_tokens = 5
+    )
+    
+    next = response.choices[0].message.content.strip()
+
+    try:
+        malady = class_map[int(next)]
         print("==")
         print ( "AI: 이 약물은 {} 에 사용되고 있어요.".format(malady) + get_malady_description(malady))
         return "AI: 이 약물은 {} 에 사용되고 있어요.".format(malady) + get_malady_description(malady) 
-    except:  
-        return "AI: 저도 '" + drug_name + "' 이 어디에 사용되는지 모르겠어요."
-       
+    except:
+        return "AI: 저도 '" + drug_name + "' 이 어디에 사용되는지 모르겠어요. "
+
 def get_malady_description(malady):
     """
     매개변수 : malady – 문자열
-    Davinci를 사용하여 API에서 질병에 대한 설명을 가져옵니다.
+    다빈치를 사용하여 API에서 질병에 관한 설명을 가져옵니다.
     """
     prompt = """
     다음은 AI 비서와의 대화입니다.
@@ -226,7 +228,7 @@ def get_malady_description(malady):
     Q: {}는 무엇입니까?
     A:""".format(malady)
 
-    # API로부터 응답을 얻습니다.
+    # API에서로부터 응답을 얻기
     next = client.chat.completions.create(
         model="gpt-3.5-turbo" ,
         messages=[
@@ -236,7 +238,7 @@ def get_malady_description(malady):
         max_tokens = 256,
         stop = [ " \n " , " Q:" , " A:" ]
     )
-    
+
     return next.choices[0].message.content.strip() + "\n"
 
 @app.route('/', methods=['GET'])
@@ -248,6 +250,10 @@ def reply():
 
 if __name__ == '__main__':
     app.run()
+
+
+
+
 ```
 
 #### 07. server 폴더에 .env 파일 생성
