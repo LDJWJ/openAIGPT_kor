@@ -10,12 +10,8 @@ chatbot_medi 폴더 생성
   * 아나콘다 설치 후, 가상환경에 설치할 때, 이 부분 추가.
 
 <!-- HTML 주석도 사용할 수 있습니다 -->
-<div style="color: blue;">
-    이 부분은 HTML을 사용하여 파란색으로 텍스트를 표시합니다.
-</div>
-
 <p align="center">
-  <img src="https://ldjwj.github.io/openAIGPT_kor/image/ch11_01_anaconda.png" width="50%" />
+  <img src="https://ldjwj.github.io/openAIGPT_kor/image/ch11_01_anaconda.png" width="30%" />
 </p>
 
 ```
