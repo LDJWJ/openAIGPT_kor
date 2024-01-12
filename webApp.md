@@ -292,6 +292,7 @@ const router = createRouter({
 export default router
 
 ```
+ - 이 코드는 Vue.js 애플리케이션에서 페이지 간의 이동과 URL 관리를 위한 기본적인 라우팅 구성을 정의하는 부분입니다. Vue Router를 사용하여 홈 페이지 및 어바웃 페이지와 같은 여러 페이지로 이동할 수 있도록 합니다.
 
 #### 09. HomeView.vue 파일 생성
 * client/src/views에서 HomeView.vue 파일을 만들고 아래 코드를 추가
@@ -364,7 +365,8 @@ export default {
 };
 </script>
 ```
-
+- 이 코드는 Vue.js를 사용하여 간단한 채팅 애플리케이션을 만드는 예시를 보여줍니다. 사용자와 AI 사이의 채팅 메시지를 화면에 표시하고, 사용자가 입력한 메시지를 서버로 전송하여 AI의 응답을 받아와 화면에 추가합니다.
+- 
 #### 10. AboutView.vue 파일 생성
 * 파일 내용 작성
 * 경로 - client/src/views/AboutView.vue
@@ -375,6 +377,8 @@ export default {
     </div> 
 </template>
 ```
+- AboutView.vue 컴포넌트의 템플릿 부분입니다. 이 컴포넌트는 Vue.js 애플리케이션의 어바웃 페이지를 나타내는 뷰
+
 
 #### 11. Python 기반의 웹 서버 실행
 * 챗봇 실행 
@@ -416,14 +420,14 @@ Flask가 werkzeug.urls에서 url_quote를 가져오려고 시도했으나 실패
 pip install --upgrade flask werkzeug
 ```
 
-#### 12. Vue.js 프로젝트를 로컬 개발 서버에서 실행
+#### 12. Vue.js 애플리케이션 로컬 개발 서버에서 실행
 * 맨처음 실행했던 anaconda prompt를 새롭게 하나 실행 후, 아래 명령으로 실행합니다.
 * client 폴더로 이동
 ```
 cd chatbot_medi\client
 npm run serve
 ```
-- Vue.js 프로젝트를 로컬 개발 서버에서 실행하기 위해 사용합니다.
+-  Vue.js 애플리케이션의 개발 서버가 실행되고, 해당 서버에서 제공하는 URL(일반적으로 "localhost:8080" 또는 기타 포트)을 통해 애플리케이션을 확인할 수 있을 것입니다. 이것은 Vue.js 애플리케이션을 로컬 환경에서 실행하고 개발하는 데 사용되는 일반적인 명령
 
 * 실행 결과
 ```
@@ -438,6 +442,7 @@ npm run serve
   To create a production build, run npm run build.
 ```
 
+  
 #### 13. 브라우저에서 실행 확인
 * 브라우저를 열고 앞에서 확인한 주소를 이동해 챗봇 확인해 보기
 ```
