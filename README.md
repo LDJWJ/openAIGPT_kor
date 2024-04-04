@@ -29,6 +29,9 @@ pip install openai
  * openAI 다양한 인공지능 모델 확인해 보기(1) - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/02_prepareing_Develoment_V2.ipynb)
  * openAI 다양한 인공지능 모델 확인해 보기(2) - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/03_availmodels_V2.ipynb)
 
+### 04. ChatGPT API 기본 예제
+ * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/04_ChatGPT_EXAMPLE_V1.ipynb)
+
 ### 04. GPT 텍스트 완성 사용하기
  * 실습 코드 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LDJWJ/openAIGPT_kor/blob/main/04_GPT_Completion_V2.ipynb)
  
